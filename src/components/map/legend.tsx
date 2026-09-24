@@ -207,7 +207,9 @@ export function Legend({ items, main, onMainOpacityChange }: LegendProps) {
         modalTitle={main.label || t("map.legend")}
         modalContent={
           localize(main.description, main.description_pt) !== "" ? (
-            <Text fontSize="sm">{main.description}</Text>
+            <Text fontSize="sm">
+              {localize(main.description, main.description_pt)}
+            </Text>
           ) : (
             <Text fontSize="sm" color="fg.muted" fontStyle="italic">
               {t("map.noDescription")}
